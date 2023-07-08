@@ -1,6 +1,6 @@
 import { addShape,addSurface } from "./lib/add-methods"
-export { Surface }
 
+export { Surface }
 
 function Surface({w,h, canvas = null})
 {
