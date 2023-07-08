@@ -80,8 +80,8 @@ const text = surface.add({
     // optional
     font: "Arial", // font
     fontSize: 50, // font size (pt)
-    verticalAlign: "center", // start | center | end
-    horizontalAlign: "center",  // top | center | bottom
+    verticalAlign: "center",  // top | center | bottom
+    horizontalAlign: "center", // start | center | end
     backgroundColor: "#ffc",
     border: {
         thickness: 1,
