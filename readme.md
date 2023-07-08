@@ -2,9 +2,9 @@
 This is a lightweight extension of the html canvas, that allow you to draw and interact with shapes in a intuitive way.
 
 ## features: 
-- draw shapes that update the canvas when the properties are changed
+- draw shapes that update the canvas automatically when its properties are changed
 - check if a point is over the shape
-- get the closest point in the corner to some point
+- get the closest point to the corner of the shape
 
 [interactive example](https://thiago099.github.io/super-canvas-example/)
 
