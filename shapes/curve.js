@@ -5,7 +5,6 @@ function useCurve()
 {
     function draw(ctx, {segments})
     {
-        ctx.beginPath();
         const {x:p1x, y:p1y, hx:h1x, hy:h1y} = segments[0]
         const {x:p2x, y:p2y, hx:h2x, hy:h2y} = segments[1]
         ctx.moveTo(p1x, p1y);

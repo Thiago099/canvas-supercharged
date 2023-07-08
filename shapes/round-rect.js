@@ -13,7 +13,6 @@ function useRect()
     let radius
     if(border == null || border.radius == 0 || border.radius == null)
     {
-      ctx.beginPath();
       ctx.rect(x,y,w,h)
       return
     }else if (typeof  border.radius === 'number') {
@@ -23,7 +22,6 @@ function useRect()
       radius = border.radius
       radius = {...{tl: 0, tr: 0, br: 0, bl: 0}, ...radius};
     }
-    ctx.beginPath();
     ctx.moveTo(x + radius.tl, y);
     ctx.lineTo(x + w - radius.tr, y);
     ctx.quadraticCurveTo(x + w, y, x + w, y + radius.tr);

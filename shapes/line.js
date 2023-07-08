@@ -4,7 +4,6 @@ function useLine()
 {
     function draw(ctx, {segments})
     {
-        ctx.beginPath()
         ctx.moveTo(segments[0].x,segments[0].y)
         for(var i = 1; i < segments.length; i++)
         {
