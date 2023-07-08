@@ -1,9 +1,9 @@
 # Super canvas
 # A html canvas wrapper with added functionality
 
-you can draw shapes that can be updated automatically
-you can check if a point(ex: mouse position) is over the shape
-you can also get the cloesest point in the corner to some point (ex: mouse position)
+- you can draw shapes that can be updated automatically
+- you can check if a point(ex: mouse position) is over the shape
+- you can also get the cloesest point in the corner to some point (ex: mouse position)
 
 ![image](https://github.com/Thiago099/super-canvas/assets/66787043/27b6b849-233c-4cba-8f76-727aaeff4282)
 
