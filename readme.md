@@ -10,6 +10,7 @@ This is a lightweight extension of the html canvas, that allow you to draw and i
 
 [example source code](https://github.com/Thiago099/super-canvas-example)
 
+![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
 ## how to use: 
 ```js
 
@@ -63,7 +64,6 @@ const {x,y} = element.getClosestPoint({x:mouseX,y:mouseY})
 ```
 ## More shapes
 
-![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
 ```js
 const square = surface.add({
     type: "rect",
