@@ -8,14 +8,14 @@ function useText()
         text = ""
       }
       ctx.font = `${fontSize}pt ${font}`;
-      ctx.textAlign = verticalAlign
+      ctx.textAlign = horizontalAlign
       const metrics = ctx.measureText(text)
       const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
 
-      if(horizontalAlign == "center")
+      if(verticalAlign == "center")
       {
         y -= h/2
-      } if(horizontalAlign != "end" && horizontalAlign != "top")
+      } if(verticalAlign != "end" && verticalAlign != "top")
       {
         y += h
       }
@@ -40,18 +40,18 @@ function useText()
         const {width:w} = metrics
         const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
 
-        if(verticalAlign == "center")
+        if(horizontalAlign == "center")
         {
           x -= w / 2
-        }else if(verticalAlign == "right" || verticalAlign == "end")
+        }else if(horizontalAlign == "right" || horizontalAlign == "end")
         {
           x-= w
         }
 
-        if(horizontalAlign == "center")
+        if(verticalAlign == "center")
         {
           y -= h / 2
-        } else if(horizontalAlign == "end" || horizontalAlign == "top")
+        } else if(verticalAlign == "end" || verticalAlign == "top")
         {
           y -= h
         }
@@ -67,18 +67,18 @@ function useText()
       const {width:w} = metrics
       const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
 
-      if(verticalAlign == "center")
+      if(horizontalAlign == "center")
       {
         x -= w / 2
-      }else if(verticalAlign == "right" || verticalAlign == "end")
+      }else if(horizontalAlign == "right" || horizontalAlign == "end")
       {
         x-= w
       }
 
-      if(horizontalAlign == "center")
+      if(verticalAlign == "center")
       {
         y -= h / 2
-      } else if(horizontalAlign == "end" || horizontalAlign == "top")
+      } else if(verticalAlign == "end" || verticalAlign == "top")
       {
         y -= h
       }

@@ -73,14 +73,14 @@ const {x,y} = element.getClosestPoint({x:mouseX,y:mouseY})
 ```js
 const text = surface.add({
     // mandatory
-    type: "text",
+    type: "text", // shape type
     text: "hello",  // text
     x:100, // X coordinate
     y:200, // Y coordinate
     // optional
     font: "Arial", // font
     fontSize: 50, // font size (pt)
-    verticalAlign: "start", // start | center | end
+    verticalAlign: "center", // start | center | end
     horizontalAlign: "center",  // top | center | bottom
     backgroundColor: "#ffc",
     border: {
