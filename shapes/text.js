@@ -1,33 +1,36 @@
-import { closestPointOnLine, calculateDistance } from "./lib/helper"
 export { useText }
 function useText()
 {
     function draw(ctx, {text,x,y,font,fontSize,verticalAlign, horizontalAlign})
     {
-        ctx.font = `${fontSize}pt ${font}`;
-        ctx.textAlign = verticalAlign
-        const metrics = ctx.measureText(text)
-        const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
+      if(text == null)
+      {
+        text = ""
+      }
+      ctx.font = `${fontSize}pt ${font}`;
+      ctx.textAlign = verticalAlign
+      const metrics = ctx.measureText(text)
+      const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
 
-        if(horizontalAlign == "center")
-        {
-          y -= h/2
-        } if(horizontalAlign != "end" && horizontalAlign != "top")
-        {
-          y += h
-        }
+      if(horizontalAlign == "center")
+      {
+        y -= h/2
+      } if(horizontalAlign != "end" && horizontalAlign != "top")
+      {
+        y += h
+      }
 
-        function fill()
-        {
-          ctx.fillText(text,x,y);
-        }
+      function fill()
+      {
+        ctx.fillText(text,x,y);
+      }
 
-        function stroke()
-        {
-          ctx.strokeText(text,x,y)
-        }
-        
-        return {fill, stroke}
+      function stroke()
+      {
+        ctx.strokeText(text,x,y)
+      }
+      
+      return {fill, stroke}
     }
 
     function pointOnShape({px, py,text, x,y,font,fontSize,verticalAlign, horizontalAlign,ctx})  
