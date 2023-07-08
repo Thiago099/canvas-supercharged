@@ -71,6 +71,26 @@ const {x,y} = element.getClosestPoint({x:mouseX,y:mouseY})
 ## More shapes
 
 ```js
+const text = surface.add({
+    // mandatory
+    type: "text",
+    text: "hello",  // text
+    // optional
+    font: "Arial", // font
+    fontSize: 50, // font size (pt)
+    verticalAlign: "center", // start | center | end
+    horizontalAlign: "center",  // top | center | bottom
+    x:100, // X coordinate
+    y:200, // Y coordinate
+    backgroundColor: "#ffc",
+    border: {
+        thickness: 1,
+        color: "#ccc",
+    },
+})
+```
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/4225eb93-2122-4f1f-9bdf-8b8405a4b59e)
+```js
 const square = surface.add({
     // mandatory
     type: "rect", // shape type
