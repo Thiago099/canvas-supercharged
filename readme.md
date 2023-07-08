@@ -8,6 +8,7 @@ This is a lightweight extension of the html canvas, that allow you to draw and i
 
 [interactive example](https://thiago099.github.io/super-canvas-example/)
 
+## how to use: 
 ```js
 
 const surface = Surface({w:800,h:600}) // optionally you can pass a canvas as parameter
