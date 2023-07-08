@@ -7,6 +7,7 @@ This is a lightweight extension of the html canvas, that allow you to draw and i
 - get the closest point in the corner to some point (ex: mouse position)
 
 [interactive example](https://thiago099.github.io/super-canvas-example/)
+
 [example source code](https://github.com/Thiago099/super-canvas-example)
 
 ## how to use: 
