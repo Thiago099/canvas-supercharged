@@ -7,7 +7,6 @@ You can create many shapes:
 
 
 ```js
-
 const circle = surface.add({
     type: "ellipse",
     backgroundColor: "#ffc",
@@ -20,9 +19,9 @@ const circle = surface.add({
     w: 100,
     h: 100,
 })
-
-
-
+```
+![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
+```js
 const square = surface.add({
     type: "rect",
     backgroundColor: "#ffc",
@@ -36,7 +35,9 @@ const square = surface.add({
     w: 100,
     h: 100,
 })
-
+```
+![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/190e9961-2bb7-41ac-8ed1-4b7cfc183f78)
+```js
 const shape = surface.add({
     type: "shape",
     backgroundColor: "#ffc",
@@ -65,8 +66,9 @@ const shape = surface.add({
     ],
     w:10
 })
-
-
+```
+![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/62125939-4c48-438f-99a0-ab729a432189)
+```js
 const line = surface.add({
     type: "line",
     backgroundColor: "#ffc",
@@ -90,7 +92,9 @@ const line = surface.add({
     ],
     w:10
 })
-
+```
+![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/2190c782-6fb5-4745-b419-2a9a966fb3a0)
+```js
 const curve = surface.add({
     type: "curve",
     backgroundColor: "#ffc",
@@ -115,3 +119,5 @@ const curve = surface.add({
     w:10
 })
 ```
+![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/629fa4dd-f591-4bbd-aa35-0ec9f55c6876)
+
