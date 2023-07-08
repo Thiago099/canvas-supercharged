@@ -14,7 +14,7 @@ function useShape()
         ctx.closePath()
     }
 
-    function pointOnShape({px, py, segments, w})  
+    function pointOnShape({px, py, segments})  
     {
       let isInside = false;
 

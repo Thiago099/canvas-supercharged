@@ -7,17 +7,20 @@ function useRect()
     y,
     w,
     h,
-    border:{radius}},
+    border},
   )
   {
-    if(radius == 0 || radius == null)
+    let radius
+    if(border == null || border.radius == 0 || border.radius == null)
     {
       ctx.beginPath();
       ctx.rect(x,y,w,h)
       return
-    }else if (typeof radius === 'number') {
+    }else if (typeof  border.radius === 'number') {
+      radius = border.radius
       radius = {tl: radius, tr: radius, br: radius, bl: radius};
     } else {
+      radius = border.radius
       radius = {...{tl: 0, tr: 0, br: 0, bl: 0}, ...radius};
     }
     ctx.beginPath();

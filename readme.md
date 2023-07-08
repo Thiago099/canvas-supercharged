@@ -23,16 +23,18 @@ var centerX = 800 / 2;
 var centerY = 600 / 2;
 
 const circle = surface.add({
-    type: "ellipse",
+    // mandatory
+    type: "ellipse", // shape type (the required parameters vary for every shape type, most of the optional are valid to all shape types)
+    x: centerX, // X coordinate
+    y: centerY, // Y coordinate
+    w: 100, // width
+    h: 100, // height
+    // optional
     backgroundColor: "#ffc",
-    border: {
-        thickness: 1,
-        color: "#ccc"
+    border: { // a border around the shape, just like the css border
+        thickness: 1, // thickness of the border
+        color: "#ccc" // color of the border
     },
-    x: centerX,
-    y: centerY,
-    w: 100,
-    h: 100,
     layer: 2, // setting the layer property will tell which order the elements should be rendered
 })
 ```
@@ -70,29 +72,27 @@ const {x,y} = element.getClosestPoint({x:mouseX,y:mouseY})
 
 ```js
 const square = surface.add({
-    type: "rect",
-    backgroundColor: "#ffc",
-    border: {
-        thickness: 1,
-        color: "#ccc",
-        radius:10,
+    // mandatory
+    type: "rect", // shape type
+    x: centerX-120, // X coordinate
+    y: centerY, // Y coordinate
+    w: 100, // width
+    h: 100, // height
+    // optional
+    backgroundColor: "#ffc", // background color
+    border: { // border
+        thickness: 1, // border thickness
+        color: "#ccc", // border color
+        radius:10, // border radius just like the css border radius
     },
-    x: centerX-120,
-    y: centerY,
-    w: 100,
-    h: 100,
 })
 ```
 ![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/190e9961-2bb7-41ac-8ed1-4b7cfc183f78)
 ```js
 const shape = surface.add({
-    type: "shape",
-    backgroundColor: "#ffc",
-    border: {
-        thickness: 1,
-        color: "#ccc",
-    },
-    segments:[
+    // mandatory
+    type: "shape", // shape type
+    segments:[ // segments of the polygon
         {
             x: 300,
             y: 20,
@@ -111,19 +111,20 @@ const shape = surface.add({
             y: 50,
         }
     ],
-    w:10
+    // optional
+    backgroundColor: "#ffc", //background color
+    border: { // border
+        thickness: 1, // border thickness
+        color: "#ccc", // border color
+    },
 })
 ```
 ![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/62125939-4c48-438f-99a0-ab729a432189)
 ```js
 const line = surface.add({
-    type: "line",
-    backgroundColor: "#ffc",
-    border: {
-        thickness: 1,
-        color: "#ccc",
-    },
-    segments:[
+    // mandatory
+    type: "line", // shape type
+    segments:[ // line segments
         {
             x: 300,
             y: 100,
@@ -137,33 +138,41 @@ const line = surface.add({
             y: 100,
         }
     ],
-    w:10
+    // optional
+    w:10 // width of the line
+    backgroundColor: "#ffc", // background color
+    border: { // border
+        thickness: 1, // border thickness
+        color: "#ccc", // border color
+    },
 })
 ```
 ![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/2190c782-6fb5-4745-b419-2a9a966fb3a0)
 ```js
 const curve = surface.add({
-    type: "curve",
-    backgroundColor: "#ffc",
-    border: {
-        thickness: 1,
-        color: "#ccc",
-    },
-    segments:[
+    // mandatory
+    type: "curve", // shape type
+    segments:[ // segments of the bezier curve
         {
-            x: 20,
-            y: 20,
-            hx: 100,
-            hy: 20,
+            x: 20, // X coordinate
+            y: 20, // Y coordinate
+            hx: 100, // helper X coordinate
+            hy: 20, // helper Y coordinate
         },
         {
-            x: 100,
+            x: 100, // ...
             y: 100,
             hx: 100,
             hy: 100,
         }
     ],
-    w:10
+    // optional
+    w:10 // with of the line
+    backgroundColor: "#ffc", // background color
+    border: { // border
+        thickness: 1, // border thickness
+        color: "#ccc", // border color
+    },
 })
 ```
 ![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/629fa4dd-f591-4bbd-aa35-0ec9f55c6876)
@@ -173,9 +182,13 @@ you can also draw a surface on another surface
 const surface2 = Surface({w:800,h:600})
 
 surface2.add({
-    surface,
-    x:100,
-    y:100,
+    surface, // surface object
+    // mandatory
+    x:100, // X coordinate
+    y:100, // Y coordinate
+    // optional
+    w:800, // width
+    h:600 // height
 })
 
 ```
