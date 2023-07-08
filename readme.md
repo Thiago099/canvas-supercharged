@@ -1,7 +1,7 @@
 # Super canvas
 # A html canvas wrapper with added functionality
 
-features: 
+## features: 
 - draw shapes that can be updated automatically
 - check if a point(ex: mouse position) is over the shape
 - get the closest point in the corner to some point (ex: mouse position)
