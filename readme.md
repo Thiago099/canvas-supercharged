@@ -75,13 +75,13 @@ const text = surface.add({
     // mandatory
     type: "text",
     text: "hello",  // text
+    x:100, // X coordinate
+    y:200, // Y coordinate
     // optional
     font: "Arial", // font
     fontSize: 50, // font size (pt)
-    verticalAlign: "center", // start | center | end
+    verticalAlign: "start", // start | center | end
     horizontalAlign: "center",  // top | center | bottom
-    x:100, // X coordinate
-    y:200, // Y coordinate
     backgroundColor: "#ffc",
     border: {
         thickness: 1,
