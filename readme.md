@@ -28,21 +28,22 @@ const circle = surface.add({
     y: centerY,
     w: 100,
     h: 100,
+    layer: 2, // setting the layer property will tell which order the elements should be rendered
 })
 ```
 
-you can remove the element by calling
+You can remove the element by calling;
 ```js
 circle.remove()
 ```
 
-all values that are passed as parameter to the add function, are available on the result object,
-and changing them from it will result on a canvas updated
+All properties of the element, are available on the result object,
+and changing them from it will result on a canvas updated.
 ```js
 circle.x = 200
 ```
 
-each add or change will result in a canvas redraw, but you can instead use transaction, so when
+Each time you add or change a element will result in a canvas redraw, but you can instead use transaction, so when
 modifying or adding multiple things at once result on a single redraw
 ```js
 surface.beguinTransaction()
