@@ -30,7 +30,7 @@ const circle = surface.add({
     w: 100, // width
     h: 100, // height
     // optional
-    backgroundColor: "#ffc",
+    backgroundColor: "#ffc", // background color
     border: { // a border around the shape, just like the css border
         thickness: 1, // thickness of the border
         color: "#ccc" // color of the border
