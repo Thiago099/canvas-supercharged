@@ -10,7 +10,7 @@ This is a lightweight extension of the html canvas, that allow you to draw and i
 
 [example source code](https://github.com/Thiago099/super-canvas-example)
 
-![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
+
 ## how to use: 
 ```js
 
@@ -33,6 +33,7 @@ const circle = surface.add({
     layer: 2, // setting the layer property will tell which order the elements should be rendered
 })
 ```
+![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
 
 You can remove the element by calling;
 ```js
