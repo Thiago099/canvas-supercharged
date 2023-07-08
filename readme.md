@@ -1,5 +1,5 @@
 # Super canvas
-# A html canvas wrapper with added functionality
+This is a lightweight extension of the html canvas, that allow you to draw and interact with shapes in a intuitive way.
 
 ## features: 
 - draw shapes that can be updated automatically
@@ -44,19 +44,19 @@ circle.x = 200
 ```
 
 Each time you add or change a element will result in a canvas redraw, but you can instead use transaction, so when
-modifying or adding multiple things at once result on a single redraw
+modifying or adding multiple things at once result on a single redraw.
 ```js
 surface.beguinTransaction()
 // add or update shapes here
 surface.endTransaction()
 ```
 
-with any shape you can call this function to get if a point intersects with it
+With any shape you can call this function to get if a point intersects with it.
 ```js
 circle.pointOnShape({x:mouseX,y:mouseY})
 ```
 
-you can also call this function to get the closest point to the edge of this shape
+You can also call this function to get the closest point to the edge of this shape.
 ```js
 const {x,y} = element.getClosestPoint({x:mouseX,y:mouseY})
 ```
