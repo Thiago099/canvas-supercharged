@@ -2,7 +2,7 @@
 This is a lightweight extension of the html canvas, that allow you to draw and interact with shapes in a intuitive way.
 
 ## features: 
-- draw shapes that can be updated automatically
+- draw shapes that update the canvas when the properties are changed
 - check if a point is over the shape
 - get the closest point in the corner to some point
 
