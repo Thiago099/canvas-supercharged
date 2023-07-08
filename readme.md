@@ -13,8 +13,11 @@ This is a lightweight extension of the html canvas, that allow you to draw and i
 
 ## how to use: 
 ```js
+import { Surface } from "super-canvas"
 
-const surface = Surface({w:800,h:600}) // optionally you can pass a canvas as parameter
+const surface = Surface({w:800,h:600, canvas:myCanvas}) // The canvas parameter is optional, if it is not passed
+                                                        // a new canvas will be created and available trough
+                                                        // surface.canvas
 
 var centerX = 800 / 2;
 var centerY = 600 / 2;
@@ -167,7 +170,7 @@ const curve = surface.add({
 
 you can also draw a surface on another surface
 ```js
-const surface2 = Surface({w:800,h:600, canvas:myCanvas})
+const surface2 = Surface({w:800,h:600})
 
 surface2.add({
     surface,
