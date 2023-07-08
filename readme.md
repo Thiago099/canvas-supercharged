@@ -46,7 +46,7 @@ circle.remove()
 ```
 
 All properties of the element, are available on the result object,
-and changing them from it will result on a canvas updated.
+and changing them will result on a canvas updated.
 ```js
 circle.x = 200
 ```
