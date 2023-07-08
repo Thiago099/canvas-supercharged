@@ -3,10 +3,13 @@
 
 # Allows to create and interact with shapes from the html canvas
 
-You can create many shapes:
-
-
 ```js
+
+const surface = Surface({w:800,h:600}) // optionally you can pass a canvas as parameter
+
+var centerX = 800 / 2;
+var centerY = 600 / 2;
+
 const circle = surface.add({
     type: "ellipse",
     backgroundColor: "#ffc",
@@ -20,6 +23,37 @@ const circle = surface.add({
     h: 100,
 })
 ```
+
+you can remove the element by calling
+```js
+circle.remove()
+```
+
+all values that are passed as parameter to the add function, are available on the result object,
+and changing them from it will result on a canvas updated
+```js
+circle.x = 200
+```
+
+each add or change will result in a canvas redraw, but you can instead use transaction, so when
+modifying or adding multiple things at once result on a single redraw
+```js
+surface.beguinTransaction()
+// add or update shapes here
+surface.endTransaction()
+```
+
+with any shape you can call this function to get if a point intersects with it
+```js
+circle.pointOnShape({x:mouseX,y:mouseY})
+```
+
+you can also call this function to get the closest point to the edge of this shape
+```js
+const {x,y} = element.getClosestPoint({x:mouseX,y:mouseY})
+```
+
+
 ![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
 ```js
 const square = surface.add({
@@ -121,3 +155,14 @@ const curve = surface.add({
 ```
 ![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/629fa4dd-f591-4bbd-aa35-0ec9f55c6876)
 
+you can also draw a surface on another surface
+```js
+const surface2 = Surface({w:800,h:600, canvas:myCanvas})
+
+surface2.add({
+    surface,
+    x:100,
+    y:100,
+})
+
+```

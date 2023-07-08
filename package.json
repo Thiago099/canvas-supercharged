@@ -1,6 +1,6 @@
 {
-  "name": "canvas-supercharged",
-  "version": "1.0.0",
+  "name": "super-canvas",
+  "version": "1.0.1",
   "description": "",
   "main": "surface.js",
   "directories": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Thiago099/canvas-supercharged/issues"
   },
-  "homepage": "https://github.com/Thiago099/canvas-supercharged#readme"
+  "homepage": "https://github.com/Thiago099/canvas-supercharged#readme",
+  "dependencies": {
+    "closest-point-on-bezier": "^1.0.12"
+  }
 }

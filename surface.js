@@ -48,7 +48,7 @@ function Surface({w,h, canvas = null})
 
         if(data.surface)
         {
-            result = addSurface(children, parents, ctx, data, obj)
+            result = addSurface(children, parents, ctx, data, obj, update)
             update()
             return result
         }
