@@ -1,7 +1,12 @@
-# Canvas supercharged
+# Super canvas
+# A html canvas wrapper with added functionality
 
+you can draw shapes that can be updated automatically
+you can check if a point(ex: mouse position) is over the shape
+you can also get the cloesest point in the corner to some point (ex: mouse position)
 
-# Allows to create and interact with shapes from the html canvas
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/27b6b849-233c-4cba-8f76-727aaeff4282)
+(interactive example)(https://thiago099.github.io/super-canvas-example/)
 
 ```js
 
