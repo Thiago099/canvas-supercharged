@@ -1,9 +1,10 @@
 # Super canvas
 # A html canvas wrapper with added functionality
 
-- you can draw shapes that can be updated automatically
-- you can check if a point(ex: mouse position) is over the shape
-- you can also get the cloesest point in the corner to some point (ex: mouse position)
+features: 
+- draw shapes that can be updated automatically
+- check if a point(ex: mouse position) is over the shape
+- get the closest point in the corner to some point (ex: mouse position)
 
 ![image](https://github.com/Thiago099/super-canvas/assets/66787043/27b6b849-233c-4cba-8f76-727aaeff4282)
 
@@ -58,7 +59,7 @@ you can also call this function to get the closest point to the edge of this sha
 ```js
 const {x,y} = element.getClosestPoint({x:mouseX,y:mouseY})
 ```
-
+## More shapes
 
 ![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
 ```js

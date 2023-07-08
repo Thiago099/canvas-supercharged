@@ -1,6 +1,6 @@
 {
   "name": "super-canvas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "surface.js",
   "directories": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Thiago099/canvas-supercharged.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Thiago099/canvas-supercharged/issues"
   },
