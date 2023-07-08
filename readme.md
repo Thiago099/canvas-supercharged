@@ -159,7 +159,7 @@ const line = surface.add({
         }
     ],
     // optional
-    cap: "square",// line ends cap (square | round) default square
+    cap: "round",// line ends cap (square | round) default square
     w:10 // width of the line
     backgroundColor: "#ffc", // background color
     border: { // border
@@ -188,7 +188,7 @@ const curve = surface.add({
         }
     ],
     // optional
-    cap: "square",// line ends cap (square | round) default square
+    cap: "round",// line ends cap (square | round) default square
     w:10 // with of the line
     backgroundColor: "#ffc", // background color
     border: { // border
