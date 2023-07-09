@@ -7,7 +7,11 @@ function useText()
       {
         text = ""
       }
-      ctx.font = `${fontSize}pt ${font}`;
+      if(fontSize != null)
+      {
+        fontSize += "pt"
+      }
+      ctx.font = `${fontSize} ${font}`;
       ctx.textAlign = horizontalAlign
       const metrics = ctx.measureText(text)
       const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
