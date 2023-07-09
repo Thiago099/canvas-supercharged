@@ -15,9 +15,14 @@ This is a lightweight extension of the html canvas, that allow you to draw and i
 ```js
 import { Surface } from "super-canvas"
 
-const surface = Surface({w:800,h:600, canvas:myCanvas}) // The canvas parameter is optional, if it is not passed
-                                                        // a new canvas will be created and available trough
-                                                        // surface.canvas
+const surface = Surface({
+    // optional parameters
+    w:800, // change canvas width
+    h:600, // change canvas height
+    canvas:myCanvas // use existing canvas, if is not passed a new canvas will be created
+}) 
+
+// you can access the canvas by using surface.canvas
 
 var centerX = 800 / 2;
 var centerY = 600 / 2;
@@ -57,7 +62,7 @@ circle.x = 200
 Each time you add or change a element will result in a canvas redraw, but you can instead use transaction, so when
 modifying or adding multiple things at once result on a single redraw.
 ```js
-surface.beguinTransaction()
+surface.beginTransaction()
 // add or update shapes here
 surface.endTransaction()
 ```

@@ -9,8 +9,26 @@ function Surface({w,h, canvas = null})
         canvas = document.createElement("canvas")
     }
     
-    canvas.width = w
-    canvas.height = h
+    else
+    
+    if(w != null)
+    {
+        canvas.width = w
+    }
+    else
+    {
+        w = canvas.width
+    }
+
+    if(h != null)
+    {
+        canvas.height = h
+    }
+    else
+    {
+        h = canvas.width
+    }
+    
 
     const ctx = canvas.getContext("2d");
 
@@ -19,12 +37,12 @@ function Surface({w,h, canvas = null})
     const children = []
     const parents = []
 
-    var obj = {canvas, ctx, add, update, beguinTransaction, endTransaction, properties:{parents,w,h,offset}}
+    var obj = {canvas, ctx, add, update, beginTransaction, endTransaction, properties:{parents,w,h,offset}}
 
     var isOnTransaction = false
     var doesTransactionDraw = false
 
-    function beguinTransaction()
+    function beginTransaction()
     {
         isOnTransaction = true;
         doesTransactionDraw = false
