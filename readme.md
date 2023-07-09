@@ -38,7 +38,9 @@ const circle = surface.add({
     layer: 2, // setting the layer property will tell which order the elements should be rendered
 })
 ```
-![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/fce29c44-bf00-4fe2-86a0-94da624a726f)
+
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/9e8a5e59-a646-49f4-8259-6c39f31fecd0)
+
 
 You can remove the element by calling;
 ```js
@@ -89,7 +91,8 @@ const text = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/4225eb93-2122-4f1f-9bdf-8b8405a4b59e)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/9e2e318b-f982-4b9c-a2d1-064bca54586a)
+
 ```js
 const square = surface.add({
     // mandatory
@@ -107,7 +110,8 @@ const square = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/190e9961-2bb7-41ac-8ed1-4b7cfc183f78)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/3dcca37d-6e3d-4ef8-aaff-62ca39b5a1f6)
+
 ```js
 const shape = surface.add({
     // mandatory
@@ -139,7 +143,7 @@ const shape = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/62125939-4c48-438f-99a0-ab729a432189)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/f84891bb-a7b0-4af2-a587-d40d87103387)
 ```js
 const line = surface.add({
     // mandatory
@@ -168,7 +172,8 @@ const line = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/2190c782-6fb5-4745-b419-2a9a966fb3a0)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/c47fc6a9-7157-4ddb-8bd7-2b45129971c6)
+
 ```js
 const curve = surface.add({
     // mandatory
@@ -197,7 +202,8 @@ const curve = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/canvas-supercharged/assets/66787043/629fa4dd-f591-4bbd-aa35-0ec9f55c6876)
+
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/5620f0eb-91bb-4bb2-85dd-4ac0677626a2)
 
 you can also draw a surface on another surface
 ```js
