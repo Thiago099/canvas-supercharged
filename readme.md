@@ -30,10 +30,10 @@ const circle = surface.add({
     w: 100, // width
     h: 100, // height
     // optional
-    backgroundColor: "#ffc", // background color
+    backgroundColor: "#BF4F51", // background color
     border: { // a border around the shape, just like the css border
         thickness: 1, // thickness of the border
-        color: "#ccc" // color of the border
+        color: "black" // color of the border
     },
     layer: 2, // setting the layer property will tell which order the elements should be rendered
 })
@@ -84,10 +84,10 @@ const text = surface.add({
     fontSize: 50, // font size (pt)
     verticalAlign: "center",  // top | center | bottom
     horizontalAlign: "center", // start | center | end
-    backgroundColor: "#ffc",
+    backgroundColor: "#BF4F51",
     border: {
         thickness: 1,
-        color: "#ccc",
+        color: "black",
     },
 })
 ```
@@ -102,10 +102,10 @@ const square = surface.add({
     w: 100, // width
     h: 100, // height
     // optional
-    backgroundColor: "#ffc", // background color
+    backgroundColor: "#BF4F51", // background color
     border: { // border
         thickness: 1, // border thickness
-        color: "#ccc", // border color
+        color: "black", // border color
         radius:10, // border radius just like the css border radius
     },
 })
@@ -136,10 +136,10 @@ const shape = surface.add({
         }
     ],
     // optional
-    backgroundColor: "#ffc", //background color
+    backgroundColor: "#BF4F51", //background color
     border: { // border
         thickness: 1, // border thickness
-        color: "#ccc", // border color
+        color: "black", // border color
     },
 })
 ```
@@ -163,12 +163,12 @@ const line = surface.add({
         }
     ],
     // optional
-    cap: "round",// line ends cap (square | round) default square
+    cap: "square",// line ends cap (square | round) default square
     w:10 // width of the line
-    backgroundColor: "#ffc", // background color
+    backgroundColor: "#BF4F51", // background color
     border: { // border
         thickness: 1, // border thickness
-        color: "#ccc", // border color
+        color: "black", // border color
     },
 })
 ```
@@ -193,12 +193,12 @@ const curve = surface.add({
         }
     ],
     // optional
-    cap: "round",// line ends cap (square | round) default square
+    cap: "square",// line ends cap (square | round) default square
     w:10 // with of the line
-    backgroundColor: "#ffc", // background color
+    backgroundColor: "#BF4F51", // background color
     border: { // border
         thickness: 1, // border thickness
-        color: "#ccc", // border color
+        color: "black", // border color
     },
 })
 ```
