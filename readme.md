@@ -39,7 +39,8 @@ const circle = surface.add({
 })
 ```
 
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/9e8a5e59-a646-49f4-8259-6c39f31fecd0)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/19767b20-a120-4829-b06b-33c01b84929e)
+
 
 
 You can remove the element by calling;
@@ -91,7 +92,9 @@ const text = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/9e2e318b-f982-4b9c-a2d1-064bca54586a)
+
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/ac1f69da-7ac0-4edd-83e9-e04b5a4c0346)
+
 
 ```js
 const square = surface.add({
@@ -136,6 +139,8 @@ const shape = surface.add({
         }
     ],
     // optional
+    x:0,
+    y:0,
     backgroundColor: "#BF4F51", //background color
     border: { // border
         thickness: 3, // border thickness
@@ -143,7 +148,8 @@ const shape = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/f84891bb-a7b0-4af2-a587-d40d87103387)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/f01063e6-6060-4868-8559-51075cc8891f)
+
 ```js
 const line = surface.add({
     // mandatory
@@ -163,6 +169,8 @@ const line = surface.add({
         }
     ],
     // optional
+    x:0,
+    y:0,
     cap: "square",// line ends cap (square | round) default square
     w:10 // width of the line
     backgroundColor: "#BF4F51", // background color
@@ -172,8 +180,8 @@ const line = surface.add({
     },
 })
 ```
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/7a0725f2-c902-4371-bda6-8784120c1e2f)
 
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/e3e9a08e-f67c-4e15-bddc-7bfb46956477)
 
 ```js
 const curve = surface.add({
@@ -194,6 +202,8 @@ const curve = surface.add({
         }
     ],
     // optional
+    x:0,
+    y:0,
     cap: "square",// line ends cap (square | round) default square
     w:10 // with of the line
     backgroundColor: "#BF4F51", // background color
@@ -204,7 +214,8 @@ const curve = surface.add({
 })
 ```
 
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/37da1c27-4d1c-4610-b39d-4da5d6398714)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/e3cdee65-2e93-40e8-8f25-8b16554e300b)
+
 
 you can also draw a surface on another surface
 ```js
