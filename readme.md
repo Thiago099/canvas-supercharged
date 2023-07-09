@@ -32,7 +32,7 @@ const circle = surface.add({
     // optional
     backgroundColor: "#BF4F51", // background color
     border: { // a border around the shape, just like the css border
-        thickness: 1, // thickness of the border
+        thickness: 3, // thickness of the border
         color: "black" // color of the border
     },
     layer: 2, // setting the layer property will tell which order the elements should be rendered
@@ -86,7 +86,7 @@ const text = surface.add({
     horizontalAlign: "center", // start | center | end
     backgroundColor: "#BF4F51",
     border: {
-        thickness: 1,
+        thickness: 3,
         color: "black",
     },
 })
@@ -104,7 +104,7 @@ const square = surface.add({
     // optional
     backgroundColor: "#BF4F51", // background color
     border: { // border
-        thickness: 1, // border thickness
+        thickness: 3, // border thickness
         color: "black", // border color
         radius:10, // border radius just like the css border radius
     },
@@ -138,7 +138,7 @@ const shape = surface.add({
     // optional
     backgroundColor: "#BF4F51", //background color
     border: { // border
-        thickness: 1, // border thickness
+        thickness: 3, // border thickness
         color: "black", // border color
     },
 })
@@ -167,7 +167,7 @@ const line = surface.add({
     w:10 // width of the line
     backgroundColor: "#BF4F51", // background color
     border: { // border
-        thickness: 1, // border thickness
+        thickness: 3, // border thickness
         color: "black", // border color
     },
 })
@@ -197,7 +197,7 @@ const curve = surface.add({
     w:10 // with of the line
     backgroundColor: "#BF4F51", // background color
     border: { // border
-        thickness: 1, // border thickness
+        thickness: 3, // border thickness
         color: "black", // border color
     },
 })
