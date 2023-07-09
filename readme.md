@@ -172,7 +172,8 @@ const line = surface.add({
     },
 })
 ```
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/c47fc6a9-7157-4ddb-8bd7-2b45129971c6)
+
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/e3e9a08e-f67c-4e15-bddc-7bfb46956477)
 
 ```js
 const curve = surface.add({
@@ -203,7 +204,7 @@ const curve = surface.add({
 })
 ```
 
-![image](https://github.com/Thiago099/super-canvas/assets/66787043/5620f0eb-91bb-4bb2-85dd-4ac0677626a2)
+![image](https://github.com/Thiago099/super-canvas/assets/66787043/37da1c27-4d1c-4610-b39d-4da5d6398714)
 
 you can also draw a surface on another surface
 ```js
