@@ -1,8 +1,8 @@
-import { addShape,addSurface } from "./lib/add-methods"
+import { addShape,addSurface,addImage } from "./lib/add-methods"
 
 export { Surface }
 
-function Surface({w,h, canvas = null})
+function Surface({w,h, canvas = null, smooth = true})
 {
     if(canvas == null)
     {
@@ -31,6 +31,12 @@ function Surface({w,h, canvas = null})
     
 
     const ctx = canvas.getContext("2d");
+    
+    if(!smooth)
+    {
+        ctx.imageSmoothingEnabled = false;
+    }
+
 
     const offset = {w:1, h:1, x:0, y:0}
 
@@ -63,10 +69,15 @@ function Surface({w,h, canvas = null})
         let result
 
         if(!data.layer) data.layer = 0
-
+        if(data.image)
+        {
+            result = addImage(children, ctx, data, update, offset)
+            update()
+            return result
+        }
         if(data.surface)
         {
-            result = addSurface(children, parents, ctx, data, obj, update)
+            result = addSurface(children, ctx, data, obj, update)
             update()
             return result
         }
