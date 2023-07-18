@@ -2,7 +2,7 @@ import { addShape,addSurface,addImage } from "./lib/add-methods"
 
 export { Surface }
 
-function Surface({w,h, canvas = null, smooth = true})
+function Surface({w,h, canvas = null, sampling = true})
 {
     if(canvas == null)
     {
@@ -32,7 +32,7 @@ function Surface({w,h, canvas = null, smooth = true})
 
     const ctx = canvas.getContext("2d");
     
-    if(!smooth)
+    if(!sampling)
     {
         ctx.imageSmoothingEnabled = false;
     }
