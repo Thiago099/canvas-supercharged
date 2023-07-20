@@ -3,6 +3,12 @@ function useText()
 {
     function draw(ctx, {text,x,y,font,fontSize,verticalAlign, horizontalAlign})
     {
+       let lines = text.split('\n').map(x=>{
+        const m = ctx.measureText(x)
+        const height = m.actualBoundingBoxAscent + m.actualBoundingBoxDescent + 5
+        return {text:x,height}
+       })
+
       if(text == null)
       {
         text = ""
@@ -13,20 +19,24 @@ function useText()
       }
       ctx.font = `${fontSize} ${font}`;
       ctx.textAlign = horizontalAlign
-      const metrics = ctx.measureText(text)
-      const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
+      const h = lines.reduce((acc, curr) => acc + curr.height, 0);
 
       if(verticalAlign == "center")
       {
-        y -= h/2
-      } if(verticalAlign != "end" && verticalAlign != "top")
+        y -=h/2
+      } 
+      if(verticalAlign != "end" && verticalAlign != "top")
       {
         y += h
       }
 
       function fill()
       {
-        ctx.fillText(text,x,y);
+        let height = 0
+        for (const {text,height:h} of lines) {
+          ctx.fillText(text, x, y - height)
+          height+=h
+        }
       }
 
       function stroke()
@@ -39,28 +49,28 @@ function useText()
 
     function pointOnShape({px, py,text, x,y,font,fontSize,verticalAlign, horizontalAlign,ctx})  
     {
-        ctx.font = `${fontSize}pt ${font}`;
-        const metrics = ctx.measureText(text)
-        const {width:w} = metrics
-        const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
+      ctx.font = `${fontSize}pt ${font}`;
+      const metrics = ctx.measureText(text)
+      const {width:w} = metrics
+      const h = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
 
-        if(horizontalAlign == "center")
-        {
-          x -= w / 2
-        }else if(horizontalAlign == "right" || horizontalAlign == "end")
-        {
-          x-= w
-        }
+      if(horizontalAlign == "center")
+      {
+        x -= w / 2
+      }else if(horizontalAlign == "right" || horizontalAlign == "end")
+      {
+        x-= w
+      }
 
-        if(verticalAlign == "center")
-        {
-          y -= h / 2
-        } else if(verticalAlign == "end" || verticalAlign == "top")
-        {
-          y -= h
-        }
+      if(verticalAlign == "center")
+      {
+        y -= h / 2
+      } else if(verticalAlign == "end" || verticalAlign == "top")
+      {
+        y -= h
+      }
 
-        return px >= x && px <= x + w && py >= y && py <= y + fontSize
+      return px >= x && px <= x + w && py >= y && py <= y + fontSize
     }
 
     
