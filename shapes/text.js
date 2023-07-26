@@ -3,7 +3,7 @@ function useText()
 {
     function draw(ctx, {text,x,y,font,fontSize,verticalAlign, horizontalAlign})
     {
-       let lines = text.split('\n').map(x=>{
+       let lines = text.split('\n').reverse().map(x=>{
         const m = ctx.measureText(x)
         const height = m.actualBoundingBoxAscent + m.actualBoundingBoxDescent + 5
         return {text:x,height}

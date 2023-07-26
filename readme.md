@@ -53,6 +53,11 @@ You can remove the element by calling;
 circle.remove()
 ```
 
+You can remove all elements by calling;
+```js
+surface.clear()
+```
+
 All properties of the element, are available on the result object,
 and changing them will result on a canvas updated.
 ```js

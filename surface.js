@@ -43,7 +43,7 @@ function Surface({w,h, canvas = null, sampling = true})
     const children = []
     const parents = []
 
-    var obj = {canvas, ctx, add, update, beginTransaction, endTransaction, properties:{parents,w,h,offset}}
+    var obj = {canvas, ctx, add, update, clear, beginTransaction, endTransaction, properties:{parents,w,h,offset}}
 
     var isOnTransaction = false
     var doesTransactionDraw = false
@@ -101,6 +101,11 @@ function Surface({w,h, canvas = null, sampling = true})
         {
             surface()
         }
+    }
+    function clear()
+    {
+        children.splice(0, children.length)
+        update()
     }
     return obj
 }
